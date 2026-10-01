@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Remedium">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="manifest" href="manifest.json">
+<title>Remedium</title>
+<style>
+:root{--bg:#f5f5f7;--card:#fff;--text:#171717;--muted:#777;--line:#e8e8eb;--accent:#111;--soft:#ececef}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+.app{max-width:520px;margin:auto;min-height:100vh;background:var(--bg);padding-bottom:92px}
+header{padding:24px 22px 10px;position:sticky;top:0;background:rgba(245,245,247,.9);backdrop-filter:blur(18px);z-index:5}
+.small{font-size:14px;color:var(--muted)}h1{font-size:32px;letter-spacing:-1.2px;margin:5px 0 0;font-weight:700}
+main{padding:12px 18px}.card{background:var(--card);border-radius:22px;padding:20px;margin:10px 0;box-shadow:0 1px 0 rgba(0,0,0,.03)}
+.hero{background:#171717;color:white;padding:22px}.hero .small{color:#aaa}.hero h2{font-size:24px;margin:6px 0 18px;letter-spacing:-.6px}.pill{display:inline-block;background:#2d2d2d;padding:7px 11px;border-radius:99px;font-size:12px}
+.row{display:flex;justify-content:space-between;gap:12px;align-items:center}.title{font-size:18px;font-weight:650;letter-spacing:-.3px}.muted{color:var(--muted)}.price{font-weight:650}.divider{height:1px;background:var(--line);margin:16px 0}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.action{background:#fff;border:0;border-radius:18px;padding:17px;text-align:left;font:inherit}.action b{display:block;margin-top:8px}.icon{width:34px;height:34px;border-radius:11px;background:var(--soft);display:grid;place-items:center;font-size:17px}
+.item{padding:15px 0;border-bottom:1px solid var(--line)}.item:last-child{border-bottom:0}.item small{color:var(--muted)}
+.nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:min(520px,100%);padding:8px 14px calc(8px + env(safe-area-inset-bottom));background:rgba(255,255,255,.92);backdrop-filter:blur(20px);border-top:1px solid #ddd;display:flex;justify-content:space-around;z-index:10}
+.nav button{border:0;background:none;font:inherit;color:#8a8a8f;font-size:11px;padding:4px 12px}.nav button.active{color:#111;font-weight:600}.nav .ni{font-size:20px;display:block;margin-bottom:2px}
+.screen{display:none}.screen.active{display:block}
+.detail-head{display:flex;gap:12px;align-items:center;margin:8px 0 20px}.back{border:0;background:#fff;border-radius:50%;width:38px;height:38px;font-size:18px}.tag{font-size:12px;background:#f0f0f2;border-radius:8px;padding:6px 8px}
+.thumb{height:105px;border-radius:16px;background:linear-gradient(135deg,#dfe1e6,#f6f6f7);display:grid;place-items:center;color:#6b6b70;font-size:12px}.thumbs{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+button{cursor:pointer}.cta{width:100%;border:0;border-radius:15px;padding:14px;background:#111;color:#fff;font:inherit;font-weight:600;margin-top:8px}
+.clinic{display:flex;gap:14px;align-items:center}.clinicpic{width:64px;height:64px;border-radius:17px;background:linear-gradient(135deg,#d7d7da,#f5f5f7);flex:none}
+.notice{background:#f0f0f2;border-radius:16px;padding:14px;font-size:14px;line-height:1.45}
+</style>
+</head>
+<body>
+<div class="app">
+<header><div class="small" id="greeting">Добрый вечер</div><h1 id="headerTitle">Remedium</h1></header>
+
+<main>
+<section id="home" class="screen active">
+  <div class="card hero"><div class="small">Ваш медицинский профиль</div><h2>Тигран, всё под контролем.</h2><span class="pill">Данные обновлены сегодня</span></div>
+  <div class="card">
+    <div class="row"><div><div class="small">Следующая рекомендация</div><div class="title">Профессиональная гигиена</div></div><div class="tag">через 18 дней</div></div>
+    <div class="divider"></div><div class="muted">Последняя гигиена — 15 июня 2026</div>
+  </div>
+  <div class="grid">
+    <button class="action" onclick="show('history')"><div class="icon">◷</div><b>История</b><span class="small">12 посещений</span></button>
+    <button class="action" onclick="show('clinics')"><div class="icon">⌖</div><b>Клиники</b><span class="small">рядом с вами</span></button>
+    <button class="action" onclick="show('docs')"><div class="icon">□</div><b>Документы</b><span class="small">18 файлов</span></button>
+    <button class="action" onclick="alert('В V0.2 подключим реальную запись')"><div class="icon">＋</div><b>Записаться</b><span class="small">выбрать врача</span></button>
+  </div>
+  <div class="card"><div class="row"><div class="title">Последнее посещение</div><span class="small">18.09.2026</span></div><div class="item"><b>Профилактический осмотр</b><br><small>Dr. Alexey Morozov · Remedent</small></div><div class="row"><span class="muted">Оплачено</span><span class="price">4 500 ₽</span></div><button class="cta" onclick="visit('v1')">Открыть приём</button></div>
+</section>
+
+<section id="history" class="screen">
+  <div class="card"><div class="title">История посещений</div><p class="muted">Все визиты в одном месте</p>
+  <div class="item" onclick="visit('v1')"><div class="row"><b>18 сентября 2026</b><span class="price">4 500 ₽</span></div><small>Профилактический осмотр · Morozov A.</small></div>
+  <div class="item" onclick="visit('v2')"><div class="row"><b>15 июня 2026</b><span class="price">7 500 ₽</span></div><small>Профгигиена · Petrova E.</small></div>
+  <div class="item" onclick="visit('v3')"><div class="row"><b>02 марта 2026</b><span class="price">32 000 ₽</span></div><small>Лечение кариеса · Sargsyan M.</small></div>
+  <div class="item"><div class="row"><b>21 декабря 2025</b><span class="price">18 000 ₽</span></div><small>Диагностика + КТ · NovaDent</small></div>
+  <div class="item"><div class="row"><b>05 октября 2025</b><span class="price">6 900 ₽</span></div><small>Профгигиена · White Room</small></div>
+  </div>
+  <div class="card"><div class="row"><span class="muted">Всего за последние 12 месяцев</span><b>68 900 ₽</b></div></div>
+</section>
+
+<section id="visit" class="screen">
+  <div class="detail-head"><button class="back" onclick="show('history')">‹</button><div><div class="small">Приём</div><div class="title" id="visitTitle">18 сентября 2026</div></div></div>
+  <div class="card"><div class="small">Клиника</div><div class="title" id="visitClinic">Remedent</div><div class="divider"></div><div class="small">Врач</div><div id="visitDoctor">Алексей Морозов, стоматолог-терапевт</div><div class="divider"></div><div class="small">Услуги</div><div id="visitService">Профилактический осмотр, фотопротокол</div></div>
+  <div class="card"><div class="title">Заключение</div><p id="visitConclusion">Состояние удовлетворительное. Рекомендована профессиональная гигиена и контрольный осмотр через 6 месяцев.</p><div class="notice">Следующая рекомендация: профессиональная гигиена через 18 дней.</div></div>
+  <div class="card"><div class="row"><span>Оплачено</span><b id="visitPrice">4 500 ₽</b></div></div>
+  <div class="card"><div class="title">Снимки и документы</div><div class="thumbs"><div class="thumb">Фото 01</div><div class="thumb">Фото 02</div><div class="thumb">Заключение PDF</div><div class="thumb">Чек</div></div></div>
+</section>
+
+<section id="clinics" class="screen">
+ <div class="card"><div class="title">Клиники</div><p class="muted">Выберите место для следующего визита</p>
+  <div class="item clinic"><div class="clinicpic"></div><div><b>Remedent</b><br><small>Пресненская наб., 8 · 4.9</small></div></div>
+  <div class="item clinic"><div class="clinicpic"></div><div><b>White Room</b><br><small>ул. Большая Якиманка, 26 · 4.8</small></div></div>
+  <div class="item clinic"><div class="clinicpic"></div><div><b>NovaDent</b><br><small>Ленинградский проспект, 36 · 4.9</small></div></div>
+ </div>
+</section>
+
+<section id="docs" class="screen">
+ <div class="card"><div class="title">Документы</div><p class="muted">Снимки, заключения и планы лечения</p>
+  <div class="item"><b>КТ обеих челюстей</b><br><small>21.12.2025 · NovaDent</small></div>
+  <div class="item"><b>План лечения</b><br><small>02.03.2026 · Sargsyan M.</small></div>
+  <div class="item"><b>Фотопротокол</b><br><small>18.09.2026 · Remedent</small></div>
+  <div class="item"><b>Заключение после гигиены</b><br><small>15.06.2026 · Petrova E.</small></div>
+  <div class="item"><b>Счёт и чек</b><br><small>18.09.2026 · 4 500 ₽</small></div>
+ </div>
+</section>
+
+<section id="profile" class="screen">
+ <div class="card"><div class="title">Тигран Саркисов</div><p class="muted">Пациент · профиль заполнен на 92%</p></div>
+ <div class="card"><div class="item"><b>Личные данные</b><br><small>Телефон · дата рождения · контакты</small></div><div class="item"><b>История расходов</b><br><small>68 900 ₽ за последние 12 месяцев</small></div><div class="item"><b>Настройки</b><br><small>Уведомления · приватность</small></div></div>
+</section>
+</main>
+
+<nav class="nav">
+<button class="active" data-screen="home" onclick="show('home')"><span class="ni">⌂</span>Главная</button>
+<button data-screen="history" onclick="show('history')"><span class="ni">◷</span>История</button>
+<button data-screen="clinics" onclick="show('clinics')"><span class="ni">⌖</span>Клиники</button>
+<button data-screen="docs" onclick="show('docs')"><span class="ni">□</span>Документы</button>
+<button data-screen="profile" onclick="show('profile')"><span class="ni">○</span>Профиль</button>
+</nav>
+</div>
+<script>
+const data={
+v1:{title:'18 сентября 2026',clinic:'Remedent',doctor:'Алексей Морозов, стоматолог-терапевт',service:'Профилактический осмотр, фотопротокол',conclusion:'Состояние удовлетворительное. Рекомендована профессиональная гигиена и контрольный осмотр через 6 месяцев.',price:'4 500 ₽'},
+v2:{title:'15 июня 2026',clinic:'White Room',doctor:'Елена Петрова, стоматолог-гигиенист',service:'Профессиональная гигиена по протоколу GBT',conclusion:'Мягкий и минерализованный налёт удалён. Рекомендован домашний уход и повторная гигиена через 3 месяца.',price:'7 500 ₽'},
+v3:{title:'02 марта 2026',clinic:'NovaDent',doctor:'Михаил Саргсян, стоматолог-терапевт',service:'Лечение кариеса, композитная реставрация',conclusion:'Проведено лечение кариозного поражения. Рекомендован контроль состояния реставрации при следующем профилактическом осмотре.',price:'32 000 ₽'}
+};
+function show(id){document.querySelectorAll('.screen').forEach(x=>x.classList.remove('active'));document.getElementById(id).classList.add('active');document.querySelectorAll('.nav button').forEach(x=>x.classList.toggle('active',x.dataset.screen===id));window.scrollTo(0,0);document.getElementById('headerTitle').textContent=id==='home'?'Remedium':({history:'История',clinics:'Клиники',docs:'Документы',profile:'Профиль',visit:'Приём'}[id]||'Remedium')}
+function visit(id){let d=data[id];document.getElementById('visitTitle').textContent=d.title;document.getElementById('visitClinic').textContent=d.clinic;document.getElementById('visitDoctor').textContent=d.doctor;document.getElementById('visitService').textContent=d.service;document.getElementById('visitConclusion').textContent=d.conclusion;document.getElementById('visitPrice').textContent=d.price;show('visit')}
+</script>
+</body></html>
