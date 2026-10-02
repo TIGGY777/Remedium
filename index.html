@@ -32,4 +32,6 @@ function confirmBook(){let c=C.find(x=>x.id==B.c);upcoming.innerHTML=`<div class
 clist.innerHTML=C.map(c=>`<div class="card" onclick="clinic('${c.id}')"><h3>${c.n}</h3><div class="muted">${c.a} · ★ 4.9</div></div>`).join('');
 hist.innerHTML=V.map((v,i)=>`<div class="card" onclick="visit(${i})"><div class="row"><b>${v[0]}</b><b>${v[4]}</b></div><div>${v[3]}</div><div class="muted">${v[1]} · ${v[2]}</div></div>`).join('');
 dlist.innerHTML=DOC.map((d,i)=>`<div class="card" onclick="doc(${i})"><b>${d[0]}</b><div class="muted">${d[1]} · ›</div></div>`).join('');
+</script><script>
+if('serviceWorker' in navigator){window.addEventListener('load',async()=>{try{const r=await navigator.serviceWorker.register('./sw.js?v=031');await r.update()}catch(e){}})}
 </script></body></html>

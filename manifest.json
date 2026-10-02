@@ -1,1 +1,17 @@
-{"name": "Remedium", "short_name": "Remedium", "start_url": "./", "display": "standalone", "background_color": "#f5f5f7", "theme_color": "#f5f5f7"}
+{
+  "name": "Remedium",
+  "short_name": "Remedium",
+  "id": "remedium-v031",
+  "start_url": "./?v=031",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f5f5f7",
+  "theme_color": "#f5f5f7",
+  "icons": [
+    {
+      "src": "icon-180.png?v=031",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}
