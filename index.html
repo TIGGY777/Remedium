@@ -1,6 +1,38 @@
-<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#f5f5f7"><link rel="manifest" href="manifest.json?v=110"><link rel="apple-touch-icon" href="icon-180.png?v=110"><title>Remedium</title>
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#f5f5f7"><link rel="manifest" href="manifest.json?v=120"><link rel="apple-touch-icon" href="icon-180.png?v=120"><title>Remedium</title>
 <style>
 :root{--bg:#f5f5f7;--card:#fff;--ink:#0b0b0c;--muted:#7b7b80;--blue:#087bf1;--line:#e7e7eb}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Helvetica Neue",Arial,sans-serif}button,input{font:inherit}.app{max-width:520px;margin:auto;min-height:100vh;padding-bottom:100px}.top{padding:34px 24px 12px}.hello{font-size:16px;color:#777}.brand{font-size:38px;font-weight:760;letter-spacing:-1.5px;margin-top:5px}.screen{display:none;padding:0 20px 28px}.screen.on{display:block}.card{background:#fff;border-radius:24px;padding:20px;margin:12px 0}.black{background:#0b0b0c;color:#fff;padding:26px 24px}.black .muted{color:#8e8e93}.black h2{font-size:25px;margin:10px 0 18px}.pill{display:inline-block;padding:9px 13px;border-radius:999px;background:#19191b;color:#aaa;font-size:13px}.muted{color:var(--muted)}.small{font-size:13px}.title{font-size:25px;font-weight:760}.section{font-size:20px;font-weight:720}.row{display:flex;align-items:center;justify-content:space-between;gap:12px}.recommend h3{font-size:20px;margin:3px 0}.badge{padding:8px 11px;border-radius:12px;background:#f0f0f2;font-size:13px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.tile{min-height:132px}.tileIcon{width:44px;height:44px;border-radius:14px;background:#eef4fb;color:var(--blue);display:flex;align-items:center;justify-content:center;font-size:23px;margin-bottom:15px}.tile b{font-size:18px;color:var(--blue)}.btn{border:0;background:#0b0b0c;color:#fff;border-radius:15px;padding:13px 17px;font-weight:650}.btn2{border:0;background:#efeff1;color:#111;border-radius:14px;padding:11px 14px;font-weight:620}.danger{color:#d70015;background:#fff0f1}.item{padding:16px 0;border-top:1px solid var(--line);cursor:pointer}.item:first-child{border-top:0}.clinicCover{width:100%;height:175px;object-fit:cover;border-radius:18px;margin-bottom:14px}.gallery{display:flex;gap:8px;overflow:auto;margin:12px -4px}.gallery img{width:78%;height:190px;object-fit:cover;border-radius:18px;flex:0 0 auto}.chip{display:inline-block;border:0;background:#efeff1;padding:9px 12px;border-radius:999px;margin:4px 3px;font-size:12px}.chip.on{background:#111;color:#fff}.doctor{display:flex;gap:13px;align-items:center}.avatar{width:56px;height:56px;border-radius:50%;background:#eee}.initial{display:flex;align-items:center;justify-content:center;font-weight:700;color:#555}.grow{flex:1}.back{border:0;background:none;padding:4px 0 12px;color:var(--blue);font-weight:620}.nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:min(520px,100%);display:flex;background:rgba(255,255,255,.94);backdrop-filter:blur(18px);border-top:1px solid #ddd;padding:10px 3px calc(10px + env(safe-area-inset-bottom));z-index:20}.nav button{flex:1;border:0;background:none;color:#7c7c80;font-size:10px}.nav button.on{color:#111;font-weight:700}.nav i{display:block;font-style:normal;font-size:21px}.slots{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.slot{background:#efeff1;border-radius:12px;padding:11px;text-align:center}.notice{background:#eef8f2;color:#236b46;padding:13px;border-radius:14px}.seg{display:flex;overflow:auto;gap:5px;margin:12px 0}.seg button{border:0;white-space:nowrap;background:#e9e9ec;border-radius:10px;padding:8px 10px}.seg button.on{background:#111;color:#fff}.money{font-size:34px;font-weight:760}.docImg{width:100%;border-radius:18px;margin:12px 0}.thumbs{display:grid;grid-template-columns:1fr 1fr;gap:8px}.thumbs img{width:100%;height:140px;object-fit:cover;border-radius:15px}.appt{border:1px solid #e4e4e7}.actionrow{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.receipt{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;background:white;border-radius:18px;padding:22px;border:1px solid #ddd}.line{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px dashed #ddd}.planStep{border-left:3px solid #111;padding:2px 0 15px 14px;margin-left:5px}
+
+/* MVP 1.2 approved visual spec */
+.historyDate{font-size:12px;color:#8a8a90;margin:20px 3px 8px;font-weight:600}
+.historyCard{display:flex;gap:12px;align-items:center;background:#fff;border-radius:22px;padding:13px;margin:8px 0;box-shadow:0 2px 16px rgba(0,0,0,.035)}
+.historyMedia{width:78px;height:72px;border-radius:16px;object-fit:cover;flex:0 0 auto;background:#ececf0}
+.historyCT{width:78px;height:72px;border-radius:16px;display:flex;align-items:center;justify-content:center;flex:0 0 auto;background:linear-gradient(145deg,#1a1c20,#454a53);color:#fff;font-weight:800;letter-spacing:.6px}
+.historyBody{min-width:0;flex:1}
+.historyService{font-size:15px;font-weight:740;line-height:1.18}
+.historyClinic{font-size:12px;color:#838389;margin-top:5px;line-height:1.3}
+.historyAmount{font-size:13px;font-weight:760;white-space:nowrap;align-self:flex-start}
+.historyKind{display:inline-block;margin-top:7px;padding:5px 8px;border-radius:999px;background:#f0f0f3;color:#777;font-size:10px}
+
+.dentalPanel{background:#fff;border-radius:28px;padding:17px 14px 20px;margin:12px 0;box-shadow:0 2px 18px rgba(0,0,0,.03)}
+.jawLabel{text-align:center;color:#8a8a90;font-size:12px;font-weight:600;margin:4px 0 5px}
+.jawArc{position:relative;height:170px;max-width:405px;margin:0 auto}
+.toothAnat{position:absolute;width:37px;height:43px;border:0;transform:translate(-50%,-50%);border-radius:46% 46% 42% 42% / 34% 34% 66% 66%;background:#f0f1f3;color:#5a5a61;font-size:10px;font-weight:780;box-shadow:inset 0 -2px 0 rgba(0,0,0,.03),0 1px 4px rgba(0,0,0,.035)}
+.toothAnat:after{content:"";position:absolute;left:9px;right:9px;bottom:-6px;height:12px;background:inherit;clip-path:polygon(0 0,45% 100%,52% 100%,100% 0);z-index:-1}
+.toothAnat.ok{background:#e8f6ef;color:#18764d}
+.toothAnat.treat{background:#fff0df;color:#bf6500}
+.toothAnat.crown{background:#eaf2ff;color:#1769d0}
+.toothAnat.watch{background:#f1eaff;color:#7343c5}
+.toothAnat.implant{background:#e7e7ea;color:#35353a}
+.toothAnat.selected{outline:3px solid #111;outline-offset:3px}
+.toothLegend{display:flex;gap:11px;flex-wrap:wrap;padding:7px 4px 0}
+.toothLegend span{font-size:10px;color:#6f6f75}
+.toothLegend i{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:4px}
+.toothInfo{background:#fff;border-radius:24px;padding:19px;margin-top:12px}
+.toothTimeline{border-left:2px solid #e2e2e6;margin:14px 0 0 8px;padding-left:16px}
+.toothTimeline div{position:relative;padding:0 0 14px;font-size:13px}
+.toothTimeline div:before{content:"";position:absolute;width:8px;height:8px;border-radius:50%;background:#111;left:-21px;top:4px}
+.clinicCover{filter:saturate(.88) contrast(1.03);box-shadow:0 8px 28px rgba(0,0,0,.08)}
+.gallery img{filter:saturate(.9) contrast(1.03)}
 </style>
 <style id="mvp100-css">
 :root{--green:#22a06b;--red:#d92d3a;--orange:#f59f18;--purple:#7655cf}
@@ -46,17 +78,17 @@
 <div id="toast" class="toast"></div><div id="onboard" class="onboard"></div><script>
 const C=[
 {id:'r',n:'Remedent',a:'Большая Дмитровка, 12',rate:'4.9',imgs:[
-'https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1400&q=85',
-'https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=1400&q=85',
-'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1400&q=85'],dirs:['Терапия','Гигиена','Ортопедия','Хирургия']},
-{id:'w',n:'White Room',a:'Пресненская наб., 8',rate:'4.8',imgs:[
-'https://images.unsplash.com/photo-1629909615184-74f495363b67?auto=format&fit=crop&w=1400&q=85',
-'https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=1400&q=85',
-'https://images.unsplash.com/photo-1606265752439-1f18756aa376?auto=format&fit=crop&w=1400&q=85'],dirs:['Терапия','Гигиена','Ортодонтия']},
-{id:'n',n:'NovaDent',a:'Остоженка, 25',rate:'4.7',imgs:[
-'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=1400&q=85',
-'https://images.unsplash.com/photo-1607271446265-0d6ba4d26f5f?auto=format&fit=crop&w=1400&q=85',
-'https://images.unsplash.com/photo-1581585099402-5b7a4e54a6c2?auto=format&fit=crop&w=1400&q=85'],dirs:['Терапия','Ортопедия','Хирургия','Ортодонтия']}
+'https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1800&q=92',
+'https://images.unsplash.com/photo-1629909615184-74f495363b67?auto=format&fit=crop&w=1800&q=92',
+'https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=1800&q=92'],dirs:['Терапия','Гигиена','Ортопедия','Хирургия']},
+{id:'w',n:'White Room',a:'Пресненская наб., 8',rate:'4.9',imgs:[
+'https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=1800&q=92',
+'https://images.unsplash.com/photo-1606265752439-1f18756aa376?auto=format&fit=crop&w=1800&q=92',
+'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1800&q=92'],dirs:['Терапия','Гигиена','Ортодонтия']},
+{id:'n',n:'NOVA',a:'Остоженка, 25',rate:'4.8',imgs:[
+'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=1800&q=92',
+'https://images.unsplash.com/photo-1607271446265-0d6ba4d26f5f?auto=format&fit=crop&w=1800&q=92',
+'https://images.unsplash.com/photo-1581585099402-5b7a4e54a6c2?auto=format&fit=crop&w=1800&q=92'],dirs:['Терапия','Ортопедия','Хирургия','Ортодонтия']}
 ];
 const DF={'Алексей Морозов':'doctor-1.jpg','Елена Петрова':'doctor-2.jpg','Михаил Саргсян':'doctor-3.jpg','Артём Белов':'doctor-4.jpg','Мария Орлова':'doctor-5.jpg','Наталья Волкова':'doctor-6.jpg','Иван Крылов':'doctor-7.jpg','Артём Беляев':'doctor-8.jpg','София Андреева':'doctor-9.jpg','Анна Меликова':'doctor-10.jpg'};
 const D=[['r','Алексей Морозов','Терапия','9 лет'],['r','Елена Петрова','Гигиена','8 лет'],['r','Михаил Саргсян','Ортопедия','12 лет'],['r','Артём Белов','Хирургия','11 лет'],['w','Мария Орлова','Терапия','9 лет'],['w','Наталья Волкова','Гигиена','10 лет'],['w','Иван Крылов','Ортодонтия','7 лет'],['n','Михаил Саргсян','Терапия','12 лет'],['n','Артём Беляев','Хирургия','13 лет'],['n','София Андреева','Ортопедия','8 лет'],['n','Анна Меликова','Ортодонтия','6 лет']];
@@ -124,13 +156,89 @@ function renderHome(){
 function renderHistory(filter='Все'){
  let rows=allVisits().filter(v=>filter==='Все'||v.service.includes(filter));
  let chips=['Все','Лечение','Гигиена','Осмотр'];
- document.getElementById('history').innerHTML=`<div class="row"><div><div class="title">История</div><div class="subtitle">Единая лента здоровья</div></div><button class="btn2" onclick="searchAll()">⌕</button></div><div class="seg">${chips.map(x=>`<button class="${x===filter?'on':''}" onclick="renderHistory('${x}')">${x}</button>`).join('')}</div><div class="timeline">${rows.map(v=>`<div class="event"><div class="eventDot ${v.service.includes('гигиен')||v.service.includes('Гигиен')?'green':''}"></div><div class="muted small" style="margin-bottom:6px">${v.dateLabel}</div><div class="eventCard click" onclick="visitById('${v.id}')"><div class="row"><div><b>${v.service}</b><div class="muted small">${v.clinic} · ${v.doctor}</div></div><b>${rub(v.amount)}</b></div></div></div>`).join('')}</div>`;
+ if(filter==='Все'){
+   rows=[...rows,{id:'ct-event',date:'2026-03-02',dateLabel:'2 марта 2026',clinic:'NOVA',doctor:'Михаил Саргсян',service:'КЛКТ обеих челюстей',amount:18000,docs:[2],isCT:true}];
+ }
+ rows.sort((a,b)=>(b.date||'').localeCompare(a.date||''));
+ const groups={};
+ rows.forEach(v=>{(groups[v.dateLabel]??=[]).push(v)});
+ const clinicPhoto=name=>{
+   let c=C.find(x=>x.n===name);
+   return c?c.imgs[0]:'';
+ };
+ document.getElementById('history').innerHTML=`
+ <div class="row">
+   <div><div class="title">История</div><div class="subtitle">Вся история лечения по датам</div></div>
+   <button class="btn2" onclick="searchAll()">⌕</button>
+ </div>
+ <div class="seg">${chips.map(x=>`<button class="${x===filter?'on':''}" onclick="renderHistory('${x}')">${x}</button>`).join('')}</div>
+ ${Object.entries(groups).map(([date,items])=>`
+   <div class="historyDate">${date}</div>
+   ${items.map(v=>`
+     <div class="historyCard click" onclick="${v.isCT?`doc(2)`:`visitById('${v.id}')`}">
+       ${v.isCT
+         ? `<div class="historyCT">КЛКТ</div>`
+         : `<img class="historyMedia" src="${clinicPhoto(v.clinic)}" onerror="this.style.display='none'">`}
+       <div class="historyBody">
+         <div class="historyService">${v.service}</div>
+         <div class="historyClinic">${v.clinic}<br>${v.doctor}</div>
+         <span class="historyKind">${v.isCT?'Диагностика':v.service.includes('Гигиен')?'Гигиена':v.service.includes('Лечение')?'Лечение':'Приём'}</span>
+       </div>
+       <div class="historyAmount">${rub(v.amount)}</div>
+     </div>`).join('')}
+   </div>`).join('')}`;
 }
+
 function visitById(id){if(id.startsWith('v')&&!id.startsWith('vx')){let i=Number(id.slice(1));if(Number.isFinite(i))return visit(i)}let v=EXTRA_VISITS.find(x=>x.id===id);if(!v)return;render(`<button class="back" onclick="show('history')">‹ История</button><div class="card"><div class="muted">${v.dateLabel}</div><h1>${v.service}</h1><div><b>${v.clinic}</b> · ${v.doctor}</div><div class="notice" style="margin-top:14px">Оплачено · ${rub(v.amount)}</div><h3>Документы приёма</h3>${v.docs.map(k=>`<div class="item row" onclick="openExtraDoc('${k}')"><b>${EXTRA_DOCS.find(x=>x.id===k)?.title||'Документ'}</b><b>›</b></div>`).join('')}</div>`)}
 
-function dentalMap(){let top=['18','17','16','15','14','13','12','11','21','22','23','24','25','26','27','28'],bot=['48','47','46','45','44','43','42','41','31','32','33','34','35','36','37','38'];let tr=a=>`<div class="teethRow">${a.slice(0,8).map(toothBtn).join('')}</div><div class="teethRow">${a.slice(8).map(toothBtn).join('')}</div>`;render(`<button class="back" onclick="show('home')">‹ Главная</button><div class="title">Зубная карта</div><div class="subtitle">Нажмите на зуб, чтобы открыть историю</div><div class="teethBlock"><div class="muted small">Верхняя челюсть</div>${tr(top)}<hr><div class="muted small">Нижняя челюсть</div>${tr(bot)}<div class="legend"><span><i style="background:#67c590"></i>Здоров</span><span><i style="background:#f1a449"></i>Лечение</span><span><i style="background:#7caef0"></i>Коронка</span><span><i style="background:#9c7cdb"></i>Наблюдение</span><span><i style="background:#888"></i>Имплант</span></div></div>`)}
-function toothBtn(n){let x=TEETH[n]||['ok','Здоров','Контроль через 6 месяцев'];return `<button class="tooth ${x[0]}" onclick="toothDetail('${n}')">${n}</button>`}
-function toothDetail(n){let x=TEETH[n]||['ok','Здоров','Контроль через 6 месяцев'];render(`<button class="back" onclick="dentalMap()">‹ Зубная карта</button><div class="card"><div class="row"><div><div class="muted small">Зуб ${n}</div><div class="title">${x[1]}</div></div><span class="badge blue">${n}</span></div><div class="sectionTitle">История</div><div class="item">18.09.2026 — контрольный осмотр</div><div class="item">02.03.2026 — диагностика</div><div class="sectionTitle">Следующее действие</div><div class="notice">${x[2]}</div></div>`)}
+function dentalMap(selected='16'){
+ const top=['18','17','16','15','14','13','12','11','21','22','23','24','25','26','27','28'];
+ const bot=['48','47','46','45','44','43','42','41','31','32','33','34','35','36','37','38'];
+ const td=n=>TEETH[n]||['ok','Здоров','Контроль через 6 месяцев'];
+ const positions=(arr,lower=false)=>arr.map((n,i)=>{
+   const t=(i-(arr.length-1)/2)/((arr.length-1)/2);
+   const x=4+i*(92/(arr.length-1));
+   const y=lower ? 25+112*(t*t) : 138-112*(t*t);
+   const status=td(n)[0];
+   return `<button class="toothAnat ${status} ${n===selected?'selected':''}" style="left:${x}%;top:${y}px" onclick="dentalMap('${n}')">${n}</button>`;
+ }).join('');
+ const x=td(selected);
+ const histories={
+   '16':['02.03.2026 — КЛКТ и диагностика','18.09.2026 — контроль состояния','Следующий этап — лечение кариеса'],
+   '26':['02.03.2026 — КЛКТ и диагностика','18.09.2026 — контроль состояния','Следующий этап — лечение кариеса'],
+   '21':['12.03.2026 — установлена коронка','18.09.2026 — контроль'],
+   '36':['18.09.2026 — начальные изменения','Наблюдение через 3 месяца'],
+   '46':['14.12.2025 — консультация ортопеда','Имплант под наблюдением']
+ };
+ const hs=histories[selected]||['18.09.2026 — профилактический осмотр','Состояние без особенностей'];
+ render(`<button class="back" onclick="show('home')">‹ Главная</button>
+ <div class="title">Зубная карта</div>
+ <div class="subtitle">Нажмите на зуб, чтобы открыть его историю</div>
+ <div class="dentalPanel">
+   <div class="jawLabel">Верхняя челюсть</div>
+   <div class="jawArc">${positions(top,false)}</div>
+   <div class="jawLabel">Нижняя челюсть</div>
+   <div class="jawArc">${positions(bot,true)}</div>
+   <div class="toothLegend">
+     <span><i style="background:#67c590"></i>Здоров</span>
+     <span><i style="background:#f1a449"></i>Лечение</span>
+     <span><i style="background:#7caef0"></i>Коронка</span>
+     <span><i style="background:#9c7cdb"></i>Наблюдение</span>
+     <span><i style="background:#888"></i>Имплант</span>
+   </div>
+ </div>
+ <div class="toothInfo">
+   <div class="row"><div><div class="muted small">Выбран зуб ${selected}</div><div class="title" style="font-size:24px">${x[1]}</div></div><span class="badge blue">${selected}</span></div>
+   <div class="sectionTitle">История зуба</div>
+   <div class="toothTimeline">${hs.map(h=>`<div>${h}</div>`).join('')}</div>
+   <div class="sectionTitle">Следующее действие</div>
+   <div class="notice">${x[2]}</div>
+   ${selected==='16'||selected==='26'?`<button class="btn" style="width:100%;margin-top:12px" onclick="treatmentPlan()">Открыть план лечения</button>`:''}
+ </div>`);
+}
+
+function toothBtn(n){let x=TEETH[n]||['ok','Здоров','Контроль через 6 месяцев'];return `<button class="tooth ${x[0]}" onclick="dentalMap('${n}')">${n}</button>`}
+function toothDetail(n){dentalMap(n)}
 
 function treatmentPlan(){let done=PLAN.stages.filter(x=>x.status==='done').length;render(`<button class="back" onclick="show('home')">‹ Главная</button><div class="title">План лечения</div><div class="subtitle">Активный план · Михаил Саргсян</div><div class="card"><div class="muted small">Комплексное лечение</div><div class="row" style="margin:6px 0"><div style="font-size:22px;font-weight:760">${rub(PLAN.paid)} <span class="muted" style="font-size:13px;font-weight:500">из ${rub(PLAN.total)}</span></div><b>43%</b></div><div class="progress"><span style="width:43%"></span></div><div class="muted small" style="margin-top:8px">${done} из ${PLAN.stages.length} этапов завершено</div></div><div class="card">${PLAN.stages.map((x,i)=>`<div class="planRow"><div class="dot ${x.status==='done'?'done':x.status==='next'?'next':''}">${x.status==='done'?'✓':i+1}</div><div><b>${x.name}</b><div class="muted small">${x.desc}</div>${x.status==='next'?'<span class="badge blue" style="display:inline-block;margin-top:6px">Следующий</span>':''}</div><b class="small">${rub(x.price)}</b></div>`).join('')}</div><div class="grid"><button class="btn2" onclick="dentalMap()">Зубная карта</button><button class="btn" onclick="booking(1)">Записаться</button></div><div class="card click" onclick="doc(0)"><div class="row"><div><b>Открыть документ плана</b><div class="muted small">Полная медицинская версия</div></div><b>›</b></div></div>`)}
 
@@ -164,5 +272,5 @@ function resetDemo(){localStorage.removeItem(MVP_STORE);APPT={active:true,c:'r',
 function startOnboarding(force=false){let key='remedium_mvp1_onboarded';if(!force&&localStorage.getItem(key))return;let idx=0,ob=document.getElementById('onboard'),pages=[['Вся история здоровья — в одном месте.','Посещения, планы лечения, документы и расходы остаются с пациентом.','История · Документы · Планы'],['Лечение становится понятным.','Remedium показывает, что уже сделано, что впереди и сколько это стоит.','План лечения · 43% выполнено'],['Запись без лишнего.','Клиника, врач, цена, свободное время — и полное управление записью.','Клиника → Врач → Время']];ob.classList.add('on');function draw(){let p=pages[idx];ob.innerHTML=`<div class="onboardBody"><div class="obBrand">Remedium</div><div class="obVisual"><div class="muted">Ваш медицинский профиль</div><div class="obMock">${p[2]}</div></div><div class="obTitle">${p[0]}</div><div class="obText">${p[1]}</div><div class="obDots">${pages.map((_,i)=>`<span class="${i===idx?'on':''}"></span>`).join('')}</div><div style="margin-top:auto"><button class="btn" style="width:100%;background:#fff;color:#111" onclick="${idx<2?'window.obNext()':'window.obDone()'}">${idx<2?'Продолжить':'Начать'}</button><button class="btn2" style="width:100%;margin-top:8px;background:transparent;color:#aaa" onclick="window.obDone()">Пропустить</button></div></div>`}window.obNext=()=>{idx++;draw()};window.obDone=()=>{localStorage.setItem(key,'1');ob.classList.remove('on');renderHome()};draw()}
 
 renderHome();renderHistory();renderClinics();renderDocs();renderProfile();homeAppt();startOnboarding();
-if('serviceWorker'in navigator)window.addEventListener('load',async()=>{try{let r=await navigator.serviceWorker.register('./sw.js?v=110');await r.update()}catch(e){}});
+if('serviceWorker'in navigator)window.addEventListener('load',async()=>{try{let r=await navigator.serviceWorker.register('./sw.js?v=120');await r.update()}catch(e){}});
 </script></body></html>
